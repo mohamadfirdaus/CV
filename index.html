@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        section, header {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        header {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #education, #knowledge, #profile {
+            display: none;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                color: #000;
+                background-color: #fff;
+            }
+        }
+    </style>
+
+    <script>
+        function showHide(section_id) {
+          var cv_section = document.getElementById(section_id);
+            if (cv_section.style.display === "none") {
+                cv_section.style.display = "block";
+          } else {
+                cv_section.style.display = "none";
+          }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <section style="text-align:center">
+            <img src="images/male.svg" width="200" />
+                <h1>Alex Andrews</h1>
+                <p>No. 1, Jalan Teknologi 5, Taman Teknologi Malaysia, 57000 Kuala Lumpur.</p>
+                <p>+60124436627</p>
+                <p>alex.andrews@gmail.com</p>
+        </section>
+        <header style="background-color: #b8dbd9" onclick="showHide('profile')">Personal Profile</header>
+        <section id="profile">
+            Computer Science graduate with IT experience in systems, web and database
+            development work and in user support. I am now seeking a graduate entry position in
+            a technical problem-solving role.
+        </section>
+        <header style="background-color: #586F7C; color:white;" onclick="showHide('education')">Education</header>
+        <section id="education">
+            2019 – 2022
+            BSc (Hons) Computer Science
+            Asia Pacific University of Technology & Innovation
+
+            Final Year project involved developing a web-based configurator/quotation
+            system for IT systems supplier. This required database design, programming
+            in PostgreSQL and functionality testing/modification
+
+        </section>
+        <header style="background-color: #04724d; color: white;" onclick="showHide('knowledge')">
+            Technical Knowledge And Skills
+        </header>
+        <section id="knowledge">
+            Informatics for E-Enterprise
+            Databases Programming: C/C++, Java, Postgre SQL (basic)
+            Systems Design and Project Management
+            Software Quality and Testing
+            Adobe Suite
+            Algorithms
+
+        </section>
+    </div>
+</body>
+</html>
